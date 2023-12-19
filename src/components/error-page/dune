@@ -1,0 +1,14 @@
+(library
+ (name errorPage)
+ (modes melange)
+ (libraries
+  reason-react
+  melange.belt
+  melange-fetch
+  melange-json
+  commentsContainer
+  comment
+  form
+  util)
+ (preprocess
+  (pps melange.ppx reason-react-ppx)))
