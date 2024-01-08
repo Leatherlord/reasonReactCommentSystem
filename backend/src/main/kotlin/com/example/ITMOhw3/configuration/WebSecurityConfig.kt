@@ -27,7 +27,11 @@ class WebSecurityConfig(private val userService: UserService) : WebSecurityConfi
     fun corsConfigurationSource(): CorsConfigurationSource {
         val configuration = CorsConfiguration()
         configuration.allowedOrigins =
-                mutableListOf("http://localhost:3000", "http://localhost:3001")
+                mutableListOf(
+                        "http://localhost:3000",
+                        "http://localhost:3001",
+                        "https://profound-cricket-regularly.ngrok-free.app"
+                )
         configuration.setAllowedMethods(mutableListOf("*"))
         configuration.allowedHeaders = mutableListOf("*")
         configuration.allowCredentials = true
