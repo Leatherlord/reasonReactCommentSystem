@@ -26,7 +26,8 @@ class WebSecurityConfig(private val userService: UserService) : WebSecurityConfi
     @Bean
     fun corsConfigurationSource(): CorsConfigurationSource {
         val configuration = CorsConfiguration()
-        configuration.allowedOrigins = mutableListOf("http://localhost:3000", "http://localhost:3001")
+        configuration.allowedOrigins =
+                mutableListOf("http://localhost:3000", "http://localhost:3001")
         configuration.setAllowedMethods(mutableListOf("*"))
         configuration.allowedHeaders = mutableListOf("*")
         configuration.allowCredentials = true
@@ -41,10 +42,10 @@ class WebSecurityConfig(private val userService: UserService) : WebSecurityConfi
                 .csrf()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/registration", "/login", "/users", "/")
+                .antMatchers("/registration", "/login", "/users", "/", "/index.html")
                 .permitAll()
                 .anyRequest()
-                .authenticated()
+                .permitAll()
                 .and()
     }
 

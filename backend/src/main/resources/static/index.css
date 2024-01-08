@@ -1,0 +1,338 @@
+/*  Table of contents:
+    - Comments Page
+    - Comments Container
+    - Comment
+    - Form
+    - Authorization Page
+    - Error Page
+    - Chats Page
+*/
+
+html,body,#root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    background-color: aquamarine;
+}
+
+/* Comments Page */
+
+.selfofly-comments-page {
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.selfofly-comments-page__content-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* End Comments Page */
+
+/* Comments Container */
+
+.selfofly-comments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+    background-color: bisque;
+    padding: 10px;
+    height: 400px;
+    overflow-y: scroll;
+
+    width: 100%;
+}
+
+/* End Comments Container */
+
+
+/* Comment */
+
+.selfofly-comment {
+    width: fit-content;
+    max-width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 3px;
+    background-color: white;
+}
+
+.selfofly-comment__header {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 5px;
+}
+
+.selfofly-comment__header-text-container {
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.selfofly-comment__header-text {
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.selfofly-comment__header-text--author {
+    color: cadetblue;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selfofly-comment__main-container {
+    padding: 7px 10px 7px 10px;
+    text-align: end;
+    max-width: 350px;
+}
+
+.selfofly-comment__main-text {
+    word-wrap: break-word;
+}
+
+/* End Comment */
+
+/* Form */
+
+.selfofly-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 20px;
+}
+
+.selfofly-form__input {
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 3px;
+    resize: none;
+    padding: 7px 10px 7px 10px;
+    font-size: 1rem;
+    text-align: end;
+}
+
+.selfofly-form__input--name {
+    color: cadetblue;
+}
+
+.selfofly-form__input--text {
+    width: calc(100% - 40px);
+    height: 100px;
+}
+
+.selfofly-form__button {
+    padding: 7px 10px 7px 10px;
+    height: 34px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    background-color: cadetblue;
+    color: white;
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.selfofly-form__button:hover {
+    cursor: pointer;
+    border-width: 2px;
+}
+
+.selfofly-form__button:active {
+    background-color: darkcyan;
+}
+
+.selfofly-form__button:disabled {
+    background-color: gray;
+}
+
+.selfofly-form__button:disabled:hover {
+    cursor: default;
+    border-width: 1px;
+}
+
+.selfofly-form__error-message {
+    color: crimson;
+}
+
+
+/* End Form */
+
+/* Authorization Page */
+
+.selfofly-authorization-page {
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.selfofly-authorization-page__main-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.selfofly-authorization-page__button {
+    padding: 7px 10px 7px 10px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    background-color: cadetblue;
+    color: white;
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.selfofly-authorization-page__button:hover {
+    cursor: pointer;
+    border-width: 2px;
+}
+
+.selfofly-authorization-page__button:active {
+    background-color: darkcyan;
+}
+
+.selfofly-authorization-page__input {
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 3px;
+    resize: none;
+    padding: 7px 10px 7px 10px;
+    font-size: 1rem;
+    text-align: end;
+}
+
+/* Authorization Page End */
+
+/* Error Page */
+
+.selfofly-error-page {
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.selfofly-error-page__main-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.selfofly-error-page__button {
+    padding: 7px 10px 7px 10px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    background-color: cadetblue;
+    color: white;
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.selfofly-error-page__button:hover {
+    cursor: pointer;
+    border-width: 2px;
+}
+
+.selfofly-error-page__button:active {
+    background-color: darkcyan;
+}
+
+.selfofly-error-page__error-code {
+    font-size: 10rem;
+    font-weight: 700;
+    color: crimson;
+}
+
+.selfofly-error-page__message {
+    font-size: 2rem;
+    font-weight: 700;
+    color: crimson;
+}
+
+/* Error Page End */
+
+/* Chat Page */
+
+.selfofly-chats-page {
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.selfofly-chats-page__main-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.selfofly-chats-page__button {
+    padding: 7px 10px 7px 10px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    background-color: cadetblue;
+    color: white;
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.selfofly-chats-page__button:hover {
+    cursor: pointer;
+    border-width: 2px;
+}
+
+.selfofly-chats-page__button:active {
+    background-color: darkcyan;
+}
+
+/* Chat Page End */
