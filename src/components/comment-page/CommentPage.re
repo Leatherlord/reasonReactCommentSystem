@@ -11,7 +11,7 @@ let make = (~chatId) => {
         let _ =
           Js.Promise.(
             Fetch.fetchWithInit(
-              "http://localhost:8080/allComments/" ++ chatId,
+              "/allComments/" ++ chatId,
               Fetch.RequestInit.make(~method_=Get, ~credentials=Include, ()),
             )
             |> then_(response =>
@@ -58,7 +58,7 @@ let make = (~chatId) => {
         let _ =
           Js.Promise.(
             Fetch.fetchWithInit(
-              "http://localhost:8080/addComment/" ++ chatId,
+              "/addComment/" ++ chatId,
               Fetch.RequestInit.make(
                 ~method_=Post,
                 ~body=
@@ -112,7 +112,10 @@ let make = (~chatId) => {
   <div className="selfofly-comments-page">
     <div className="selfofly-comments-page__content-container">
       <CommentsContainer> comments </CommentsContainer>
-      <Form onSubmit=sendComment />
+      <Form
+        onSubmit=sendComment
+        onBack={() => ReasonReactRouter.push("/main")}
+      />
     </div>
   </div>;
 };

@@ -14,7 +14,7 @@ let make = () => {
         let _ =
           Js.Promise.(
             Fetch.fetchWithInit(
-              "http://localhost:8080/login",
+              "/login",
               Fetch.RequestInit.make(
                 ~method_=Post,
                 ~body=
@@ -60,7 +60,7 @@ let make = () => {
         let _ =
           Js.Promise.(
             Fetch.fetchWithInit(
-              "http://localhost:8080/registration",
+              "/registration",
               Fetch.RequestInit.make(
                 ~method_=Post,
                 ~body=

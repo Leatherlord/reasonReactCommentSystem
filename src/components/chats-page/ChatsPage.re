@@ -10,7 +10,7 @@ let make = () => {
         let _ =
           Js.Promise.(
             Fetch.fetchWithInit(
-              "http://localhost:8080/getChatIds",
+              "/getChatIds",
               Fetch.RequestInit.make(~method_=Get, ~credentials=Include, ()),
             )
             |> then_(response =>
